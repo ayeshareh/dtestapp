@@ -1,5 +1,7 @@
 import streamlit as st
 import os
+import google.generativeai as genai
+
 import json
 import pandas as pd
 import glob
@@ -10,9 +12,10 @@ import re
 # -------------------------------
 # GEMINI API CONFIG
 # -------------------------------
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+API_KEY = "AIzaSyA9XxuUhdnNtiYKC3Ytn5OrSOCiSZm98f0"
+
 MODEL = "gemini-2.0-flash"
-GEMINI_URL = f"https://generativelanguage.googleapis.com/v1beta/models/{MODEL}:generateContent?key={GEMINI_API_KEY}"
+GEMINI_URL = f"https://generativelanguage.googleapis.com/v1beta/models/{MODEL}:generateContent?key={API_KEY}"
 
 # -------------------------------
 # GEMINI API CALL
